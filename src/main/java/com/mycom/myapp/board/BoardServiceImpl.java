@@ -1,4 +1,4 @@
-package com.mycompany.myapp.board;
+package com.mycom.myapp.board;
 
 import java.util.List;
 

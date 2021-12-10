@@ -1,4 +1,4 @@
-package com.mycompany.myapp.board;
+package com.mycom.myapp.board;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mycompany.myapp.board.BoardDAO;
-import com.mycompany.myapp.board.BoardVO;
+import com.mycom.myapp.board.BoardDAO;
+import com.mycom.myapp.board.BoardVO;
 
 @Controller
 public class BoardController {
