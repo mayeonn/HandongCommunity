@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/ dtd/mybatis-3-mapper.dtd">
-<mapper namespace="TodoListDAO">
-	
+<mapper namespace="BoardDAO">
+	<insert id="insertBoardList">
+		insert into BoardList (title, writer, content) values (#{title} , #{writer} ,
+		#{content})
+	</insert>
+	<update id="updateBoard">
+		update BoardList
+		set title=#{title}, content=#{content} where seq=#{seq}
+	</update>
+	<delete id="deleteBoardList">
+		delete from BoardList where seq=#{seq}
+	</delete>
+	<select id="getBoardList" resultType="boardlist">
+		select * from BoardList where seq=#{seq}
+	</select>
+	<select id="getBoardList" resultType="boardlist">
+		select * from BoardList order by seq desc
+	</select>
 </mapper>

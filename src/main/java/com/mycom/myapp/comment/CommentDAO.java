@@ -22,11 +22,6 @@ public class CommentDAO {
 		return result;
 	}
 	
-	public int updateComment(CommentVO vo) {
-		int result = sqlSession.insert("Comment.updateComment", vo);
-		return result;
-	}
-	
 	public CommentVO getComment(int seq) {
 		CommentVO one = sqlSession.selectOne("Comment.getComment", seq);
 		return one;
