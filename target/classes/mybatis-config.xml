@@ -3,6 +3,8 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+	<!-- Properties 파일 설정 -->
+	<properties resource="db.properties" />
 	<typeAliases>
 		<typeAlias alias="board" type="com.mycom.myapp.board.BoardVO" />
 		<typeAlias alias="todolist" type="com.mycom.myapp.todolist.TodoListVO" />
