@@ -128,7 +128,7 @@
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-jdbc</artifactId>
-    <version>5.3.12</version>
+    <version>${org.springframework-version}</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
