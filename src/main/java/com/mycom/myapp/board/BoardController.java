@@ -31,9 +31,9 @@ public class BoardController {
 	public String addPostOK(BoardVO vo) {
 		int i = boardService.insertBoard(vo);
 		if(i==0)
-			System.out.println("데이터 추가 실패");
+			System.out.println("게시물 추가 실패");
 		else
-			System.out.println("데이터 추가 성공!!!");
+			System.out.println("게시물 추가 성공!!!");
 		return "redirect:list";
 	}
 	
@@ -48,9 +48,9 @@ public class BoardController {
 	public String editPostOK(BoardVO vo) {
 		int i = boardService.updateBoard(vo);
 		if(i==0)
-			System.out.println("데이터 수정 실패");
+			System.out.println("게시글 수정 실패");
 		else
-			System.out.println("데이터 수정 성공!!!");
+			System.out.println("게시글 수정 성공!!!");
 		return "redirect:list";
 	}
 	
@@ -58,9 +58,9 @@ public class BoardController {
 	public String deletePost(@PathVariable("id") int id){
 		int i = boardService.deleteBoard(id);
 		if(i==0)
-			System.out.println("데이터 삭제 실패");
+			System.out.println("게시글 삭제 실패");
 		else
-			System.out.println("데이터 삭제 성공!!!");
+			System.out.println("게시글 삭제 성공!!!");
 		return "redirect:../list";
 	}
 	
