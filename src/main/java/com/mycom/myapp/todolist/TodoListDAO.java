@@ -37,4 +37,9 @@ public class TodoListDAO {
 		return list;
 	}
 	
+	public int checkTodoList(int seq) {
+		int result = sqlSession.insert("TodoList.checkTodoList", seq);
+		return result;
+	}
+	
 }
