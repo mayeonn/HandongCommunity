@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/ dtd/mybatis-3-mapper.dtd">
-<mapper namespace="BoardDAO">
-	<insert id="insertBoardList">
-		insert into BoardList (title, writer, content) values (#{title} , #{writer} ,
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+	<insert id="insertBoard">
+		insert into Board (title, writer, content) values (#{title} , #{writer} ,
 		#{content})
 	</insert>
 	<update id="updateBoard">
-		update BoardList
+		update Board
 		set title=#{title}, content=#{content} where seq=#{seq}
 	</update>
-	<delete id="deleteBoardList">
-		delete from BoardList where seq=#{seq}
+	<delete id="deleteBoard">
+		delete from Board where seq=#{seq}
 	</delete>
-	<select id="getBoardList" resultType="boardlist">
-		select * from BoardList where seq=#{seq}
+	<select id="getBoard" resultType="board">
+		select * from Board where seq=#{seq}
 	</select>
-	<select id="getBoardList" resultType="boardlist">
-		select * from BoardList order by seq desc
+	<select id="getBoardList" resultType="board">
+		select * from Board order by seq desc
 	</select>
 </mapper>

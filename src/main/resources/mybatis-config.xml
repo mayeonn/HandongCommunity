@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+<!DOCTYPE configuration 
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<!-- Properties 파일 설정 -->
-	<properties resource="db.properties" /> <!-- Alias 설정 -->
 	<typeAliases>
 		<typeAlias alias="board" type="com.mycom.myapp.board.BoardVO" />
 		<typeAlias alias="todolist" type="com.mycom.myapp.todolist.TodoListVO" />
@@ -27,5 +26,4 @@
 		<mapper resource="mappers/comment-mapper.xml" />
 		<mapper resource="mappers/todolist-mapper.xml" />
 	</mappers>
-	
 </configuration>
