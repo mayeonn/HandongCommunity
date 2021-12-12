@@ -3,19 +3,19 @@ package com.mycom.myapp.todolist;
 import java.util.Date;
 
 public class TodoListVO {
-	private int id;
+	private int seq;
 	private String title;
-	private String desc;
-	private Date current_date;
+	private String content;
+	private Date regdate;
 	private String due_date;
 	private Integer is_complete;
 
-	public int getId() {
-		return id;
+	public int getSeq() {
+		return seq;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setSeq(int seq) {
+		this.seq = seq;
 	}
 
 	public String getTitle() {
@@ -26,20 +26,20 @@ public class TodoListVO {
 		this.title = title;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getcontent() {
+		return content;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setcontent(String desc) {
+		this.content = desc;
 	}
 
-	public Date getCurrent_date() {
-		return current_date;
+	public Date getregdate() {
+		return regdate;
 	}
 
-	public void setCurrent_date(Date current_date) {
-		this.current_date = current_date;
+	public void setregdate(Date current_date) {
+		this.regdate = current_date;
 	}
 
 	public String getDue_date() {

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,13 +56,13 @@
 		<td>${u.writer}</td>
 		<td>${u.regdate}</td>
 		<td>${u.content}</td>
-		<td><a href="/board/editpostform/${u.seq}">수정</a></td>
+		<td><a href="/board/editform/${u.seq}">수정</a></td>
 		<td><a href="javascript:delete_ok('${u.seq}')">삭제</a></td>
 	</tr>
 </c:forEach>
 
 </table>
-<br/><button type="button" onclick="location.href='addpostform.jsp'">새글작성</button>
+<br/><button type="button" onclick="location.href='/board/add'">새글작성</button>
 </body>
 </html>
 

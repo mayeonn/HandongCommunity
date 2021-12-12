@@ -4,20 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Add Post</title>
+<title>AddPost</title>
 <style>
-img, label {
-	display: inline-block;
+input{
+	width: 500px;
+	height: 30px;
+	background-color: #dcefe5;
+	border: none;
+	border-radius: 5px;
 }
-
-label {
-	width: 130px
+textarea{
+	background-color: #dcefe5;
+	border: none;
+	border-radius: 5px;
 }
-
 button {
-	background-color: green;
+	background-color: #418b62;
 	color: white;
-	font-size: 15px
+	font-size: 15px;
+	border: 1px;
+	width: 100px;
+	height: 50px;
 }
 </style>
 </head>
@@ -26,14 +33,14 @@ button {
 
 <h2>게시물 추가</h2>
 
-<form action="/board/addok" method="post">
+<form action="/board/addok" method="POST">
 <table>
-<tr><td>제목:</td><td><input type="text" name="title"/></td></tr>
-<tr><td>글쓴이:</td><td><input type="text" name="writer"/></td></tr>
-<tr><td>내용:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
+<tr><td><input type="text" name="title" placeholder="제목"/></td></tr>
+<tr><td><input type="text" name="writer" placeholder="글쓴이"/></td></tr>
+<tr><td><textarea cols="61" rows="10" name="content" placeholder="내용"></textarea></td></tr>
 </table>
 <button type="submit">추가하기</button>
-<button type="button" onclick="location.href='list'">취소하기</button>
+<button type="button" onclick="location.href='/board/list'">취소하기</button>
 </form>
 
 </body>

@@ -1,24 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Post</title>
+<title>EditPost</title>
 <style>
-img, label {
-	display: inline-block;
-}
-
-label {
-	width: 130px
-}
-
-button {
-	background-color: green;
+#cate{
+	width: 100px;
+	height: 30px;
+	background-color: #75bd87;
+	border-radius: 2px;
 	color: white;
-	font-size: 15px
+	text-align: center;
 }
+#cont {
+	width: 400px;
+	background-color: #dcefe5;
+	border-radius: 5px;
+}
+#butt {
+	background-color: #418b62;
+	color: white;
+	font-size: 15px;
+	border: 1px;
+	width: 100px;
+	height: 50px;
+}
+
 </style>
 </head>
 
@@ -26,24 +38,24 @@ button {
 
 <h2>게시물 수정</h2>
 
-<form:form commandName="BoardVO" method="post " action="../board/editok">
+<form:form modelAttribute="boardVO" method="POST" action="../editok">
 	<form:hidden path="seq" />
 	<table>
 		<tr>
-			<td>제목:</td>
-			<td><form:input path="title" /></td>
+			<td id="cate">제목</td>
+			<td id="cont"><form:input path="title" /></td>
 		</tr>
 		<tr>
-			<td>글쓴이:</td>
-			<td><form:input path="writer" /></td>
+			<td id="cate">글쓴이</td>
+			<td id="cont"><form:input path="writer" /></td>
 		</tr>
 		<tr>
-			<td>내용:</td>
-			<td><form:textarea cols="50" rows="5" path="content" /></td>
+			<td id="cate">내용</td>
+			<td id="cont"><form:textarea cols="50" rows="5" path="content" /></td>
 		</tr>
 	</table>
-	<input type="submit" value="수정하기" />
-	<input type="button" value="취소하기" onclick="history.back()" />
+	<input id="butt" type="submit" value="수정하기" />
+	<input id="butt" type="button" value="취소하기" onclick="history.back()" />
 </form:form>
 
 </body>

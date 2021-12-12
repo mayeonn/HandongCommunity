@@ -2,19 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="TodoList">
 	<insert id="insertTodoList">
-		insert into TodoList (title, desc, due_date) values (#{title} , #{desc} ,
-		#{due_date})
+		insert into TODOLIST (title, content, regdate) values (#{title}, #{content}, #{regdate})
 	</insert>
 	<delete id="deleteTodoList">
-		delete from TodoList where seq=#{seq}
+		delete from TODOLIST where seq=#{seq}
 	</delete>
 	<select id="getTodoList" resultType="todolist">
-		select * from TodoList where seq=#{seq}
+		select * from TODOLIST where seq=#{seq}
 	</select>
 	<select id="getCommentList" resultType="todolist">
-		select * from TodoList order by seq desc
+		select * from TODOLIST order by seq desc
 	</select>
 	<update id="checkTodoList">
-		update TodoList set is_complete=1 where seq=#{seq}
+		update TODOLIST set is_complete=1 where seq=#{seq}
 	</update>
 </mapper>

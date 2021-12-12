@@ -9,5 +9,5 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias alias="todolist" type="com.mycom.myapp.todolist.TodoListVO" />
 		<typeAlias alias="comment" type="com.mycom.myapp.comment.CommentVO" />
 	</typeAliases>
-	
+
 </configuration>
