@@ -47,7 +47,7 @@ button {
 <h1>Handong Community</h1>
 
 
-<button type="button" onclick="location.href='add'">새글작성</button>
+<button type="button" onclick="location.href='/board/add'">새글작성</button>
 <br><br>
 
 <!-- Sidebar -->
@@ -89,11 +89,7 @@ button {
 	</tr>
 </c:forEach>
 </table>
-<<<<<<< HEAD
-<br/><button type="button" onclick="location.href='/board/add'">새글작성</button>
-=======
 
->>>>>>> efa18c63517563db6e33f449957a8344d253cfdc
 </body>
 </html>
 

@@ -11,5 +11,6 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+<jsp:forward page="list.jsp" />
 </body>
 </html>
