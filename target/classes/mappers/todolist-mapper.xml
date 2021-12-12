@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="TodoList">
 	<insert id="insertTodoList">
-		insert into TodoList (title, desc, due_date) values (#{title} , #{desc} ,
-		#{due_date})
+		insert into TodoList (title, content, regdate) values (#{title} , #{content} ,
+		#{regdate})
 	</insert>
 	<delete id="deleteTodoList">
 		delete from TodoList where seq=#{seq}
