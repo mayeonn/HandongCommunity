@@ -9,9 +9,9 @@
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://walab.handong.edu:3306/PP2_21900635" />
-		<property name="username" value="PP2_21900635" />
-		<property name="password" value="elad8eiW" />
+			value="jdbc:mysql://walab.handong.edu:3306/PP2_21900207" />
+		<property name="username" value="PP2_21900207" />
+		<property name="password" value="la9Aeg6U" />
 	</bean>
 
 	<bean id="sqlSessionFactory"

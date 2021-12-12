@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mycom.myapp.board.BoardDAO;
-import com.mycom.myapp.board.BoardVO;
-
 @Controller
 public class BoardController {
 
@@ -41,7 +38,7 @@ public class BoardController {
 	public String editPost(@PathVariable("id") int id, Model model){
 		BoardVO boardVO = boardService.getBoard(id);
 		model.addAttribute("boardVO", boardVO);
-		return "editform";
+		return "editpostform";
 	}
 	
 	@RequestMapping(value = "/board/editok", method = RequestMethod.POST)
