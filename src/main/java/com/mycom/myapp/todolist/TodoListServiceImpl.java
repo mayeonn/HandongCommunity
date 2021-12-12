@@ -24,6 +24,9 @@ public class TodoListServiceImpl implements TodoListService{
 	public List<TodoListVO> getTodoListList(){
 		return todolistDAO.getTodoListList();
 	}
+	public int checkTodoList(int seq) {
+		return todolistDAO.checkTodoList(seq);
+	}
 }
 
 

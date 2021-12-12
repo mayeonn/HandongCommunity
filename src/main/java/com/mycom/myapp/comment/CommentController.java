@@ -7,17 +7,26 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.mycom.myapp.board.BoardVO;
+
 @Controller
 public class CommentController {
 
 	@Autowired
 	CommentService commentService;
-
-	@RequestMapping(value = "/comment/list", method = RequestMethod.GET)
-	public String commentlist(Model model) {
-		model.addAttribute("list", commentService.getCommentList());
+	
+	@RequestMapping(value = "/comment/list/{id}", method = RequestMethod.GET)
+	public String editPost(@PathVariable("id") int id, Model model){
+		CommentVO commentVO = commentService.getComment(id);
+		model.addAttribute("commentVO", commentVO);
 		return "commentlist";
 	}
+
+//	@RequestMapping(value = "/comment/list", method = RequestMethod.GET)
+//	public String commentlist(Model model) {
+//		model.addAttribute("list", commentService.getCommentList());
+//		return "commentlist";
+//	}
 
 	@RequestMapping(value = "/comment/add", method = RequestMethod.GET)
 	public String addComment() {
