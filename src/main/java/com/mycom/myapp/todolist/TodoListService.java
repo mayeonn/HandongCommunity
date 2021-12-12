@@ -8,4 +8,5 @@ public interface TodoListService {
 	public int updateTodoList(TodoListVO vo);
 	public TodoListVO getTodoList(int seq);
 	public List<TodoListVO> getTodoListList();
+	public int checkTodoList(int seq);
 }
