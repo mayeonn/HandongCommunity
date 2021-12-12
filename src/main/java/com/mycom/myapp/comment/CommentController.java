@@ -17,16 +17,9 @@ public class CommentController {
 	
 	@RequestMapping(value = "/comment/list/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model){
-		CommentVO commentVO = commentService.getComment(id);
-		model.addAttribute("commentVO", commentVO);
+		model.addAttribute("list", commentService.getCommentList(id));
 		return "commentlist";
 	}
-
-//	@RequestMapping(value = "/comment/list", method = RequestMethod.GET)
-//	public String commentlist(Model model) {
-//		model.addAttribute("list", commentService.getCommentList());
-//		return "commentlist";
-//	}
 
 	@RequestMapping(value = "/comment/add", method = RequestMethod.GET)
 	public String addComment() {

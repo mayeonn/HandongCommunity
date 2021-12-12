@@ -11,6 +11,6 @@
 		select * from COMMENT where seq=#{seq}
 	</select>
 	<select id="getCommentList" resultType="comment">
-		select * from COMMENT order by seq desc
+		select * from COMMENT where board_id=#{board_id} order by seq desc
 	</select>
 </mapper>

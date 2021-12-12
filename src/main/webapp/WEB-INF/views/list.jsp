@@ -79,7 +79,6 @@ button {
 		<td>${u.title}</td>
 		<td>${u.writer}</td>
 		<td>${u.content}</td>
-
 		<td>${u.regdate}</td>
 		<td>${u.likes}</td>
 		<td>${u.numOfComments}</td>
