@@ -27,8 +27,8 @@ public class CommentDAO {
 		return one;
 	}
 	
-	public List<CommentVO> getCommentList(){
-		List<CommentVO> list = sqlSession.selectList("Comment.getCommentList");
+	public List<CommentVO> getCommentList(int seq){
+		List<CommentVO> list = sqlSession.selectList("Comment.getCommentList", seq);
 		return list;
 	}
 	

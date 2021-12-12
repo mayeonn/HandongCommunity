@@ -47,7 +47,7 @@ button {
 <h1>Handong Community</h1>
 
 
-<button type="button" onclick="location.href='/board/add'">새글작성</button>
+<button type="button" onclick="location.href='../board/add'">새글작성</button>
 <br><br>
 
 <!-- Sidebar -->
@@ -61,13 +61,15 @@ button {
 <table id="list" width="90%">
 
 <tr>
+	<th>seq</th>
 	<th>Title</th>
 	<th>Writer</th>
 	<th>Content</th>
 	<th>Date</th>
 	<th>Likes</th>
 	<th>Comments</th>
-	<th>View post</th>
+	<th>View Comments</th>
+	<th>Add Comment</th>
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
@@ -76,14 +78,15 @@ button {
 <!-- 반복문에서 list객체(BoardVO 타입)를 u라는 변수명으로 사용  -->
 <c:forEach items="${list}" var="u">
 	<tr>
+		<td>${u.seq}</td>
 		<td>${u.title}</td>
 		<td>${u.writer}</td>
 		<td>${u.content}</td>
-
 		<td>${u.regdate}</td>
 		<td>${u.likes}</td>
 		<td>${u.numOfComments}</td>
 		<td><a href="../comment/list/${u.seq}">댓글보기</a></td>
+		<td><a href="../comment/add">댓글쓰기</a></td>
 		<td><a href="/board/editform/${u.seq}">글수정</a></td>
 		<td><a href="javascript:delete_ok('${u.seq}')">글삭제</a></td>
 	</tr>

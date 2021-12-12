@@ -27,8 +27,8 @@ public class CommentServiceImpl implements CommentService{
 	}
 	
 	@Override
-	public List<CommentVO> getCommentList(){
-		return commentDAO.getCommentList();
+	public List<CommentVO> getCommentList(int seq){
+		return commentDAO.getCommentList(seq);
 	}
 }
 

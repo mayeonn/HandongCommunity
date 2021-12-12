@@ -17,16 +17,9 @@ public class CommentController {
 	
 	@RequestMapping(value = "/comment/list/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model){
-		CommentVO commentVO = commentService.getComment(id);
-		model.addAttribute("commentVO", commentVO);
+		model.addAttribute("list", commentService.getCommentList(id));
 		return "commentlist";
 	}
-
-//	@RequestMapping(value = "/comment/list", method = RequestMethod.GET)
-//	public String commentlist(Model model) {
-//		model.addAttribute("list", commentService.getCommentList());
-//		return "commentlist";
-//	}
 
 	@RequestMapping(value = "/comment/add", method = RequestMethod.GET)
 	public String addComment() {
@@ -40,7 +33,7 @@ public class CommentController {
 			System.out.println("댓글 추가 실패");
 		else
 			System.out.println("댓글 추가 성공!!!");
-		return "redirect:commentlist";
+		return "redirect:../board/list";
 	}
 	
 	
@@ -51,7 +44,7 @@ public class CommentController {
 			System.out.println("댓글 삭제 실패");
 		else
 			System.out.println("댓글 삭제 성공!!!");
-		return "redirect:../commentlist";
+		return "redirect:../../board/list";
 	}
 	
 }

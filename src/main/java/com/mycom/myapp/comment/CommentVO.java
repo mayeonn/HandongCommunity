@@ -5,6 +5,7 @@ import java.util.Date;
 public class CommentVO {
 
 	private int seq;
+	private int board_id;
 	private String content;
 	private String writer;
 	private Date regdate;
@@ -39,6 +40,14 @@ public class CommentVO {
 
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
+	}
+
+	public int getBoard_id() {
+		return board_id;
+	}
+
+	public void setBoard_id(int board_id) {
+		this.board_id = board_id;
 	}
 
 }
