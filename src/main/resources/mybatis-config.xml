@@ -3,29 +3,11 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<!-- Properties 파일 설정 -->
-	<properties resource="db.properties" />
+
 	<typeAliases>
 		<typeAlias alias="board" type="com.mycom.myapp.board.BoardVO" />
 		<typeAlias alias="todolist" type="com.mycom.myapp.todolist.TodoListVO" />
 		<typeAlias alias="comment" type="com.mycom.myapp.comment.CommentVO" />
 	</typeAliases>
-	<!-- DataSource 설정 -->
-	<environments default="development">
-		<environment id="development">
-			<transactionManager type="JDBC" />
-			<dataSource type="POOLED">
-				<property name="driver" value="${jdbc.driverClassName}" />
-				<property name="url" value="${jdbc.url}" />
-				<property name="username" value="${jdbc.username}" />
-				<property name="password" value="${jdbc.password}" />
-			</dataSource>
-		</environment>
-	</environments>
-	<!-- Sql Mapper 설정 -->
-	<mappers>
-		<mapper resource="mappers/board-mapper.xml" />
-		<mapper resource="mappers/comment-mapper.xml" />
-		<mapper resource="mappers/todolist-mapper.xml" />
-	</mappers>
+	
 </configuration>
