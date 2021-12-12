@@ -33,7 +33,7 @@ public class CommentController {
 			System.out.println("댓글 추가 실패");
 		else
 			System.out.println("댓글 추가 성공!!!");
-		return "redirect:commentlist";
+		return "redirect:../board/list";
 	}
 	
 	
@@ -44,7 +44,7 @@ public class CommentController {
 			System.out.println("댓글 삭제 실패");
 		else
 			System.out.println("댓글 삭제 성공!!!");
-		return "redirect:../commentlist";
+		return "redirect:../../board/list";
 	}
 	
 }

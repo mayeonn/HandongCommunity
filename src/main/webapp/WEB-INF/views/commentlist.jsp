@@ -30,6 +30,14 @@
   color: white;
 }
 </style>
+<script>
+	function delete_ok(id) {
+		var a = confirm("정말로 삭제하겠습니까?");
+		if (a)
+			location.href = '../deleteok/' + id;
+	}
+	
+</script>
 </head>
 <body>
 <h1>Comments</h1>
@@ -40,6 +48,7 @@
 	<th>Writer</th>
 	<th>Content</th>
 	<th>Date</th>
+	<th>Delete</th>
 </tr>
 
 
@@ -48,6 +57,7 @@
 		<td>${u.writer}</td>
 		<td>${u.content}</td>
 		<td>${u.regdate}</td>
+		<td><a href="javascript:delete_ok('${u.seq}')">댓글삭제</a></td>
 	</tr>
 </c:forEach>
 </table>
