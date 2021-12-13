@@ -38,7 +38,7 @@
 
 <h2>할일 수정</h2>
 
-<form:form modelAttribute="todolistVO" method="POST" action="../todolist/editok">
+<form:form modelAttribute="todolistVO" method="POST" action="../editok">
 	<form:hidden path="seq" />
 	<table>
 		<tr>

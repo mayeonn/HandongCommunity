@@ -41,6 +41,11 @@
 <body>
 <h1>TodoList</h1>
 
+<!-- Button -->
+<button type="button" onclick="history.back()">목록</button>
+<button type="button" onclick="location.href='add'">일정 추가</button>
+
+
 <table id="list" width="90%">
 
 <tr>

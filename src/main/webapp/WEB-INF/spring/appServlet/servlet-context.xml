@@ -24,6 +24,17 @@
 	
 	<context:component-scan base-package="com.mycom.myapp" />
 	
-	
+	<beans:bean id="LoginCheckInterceptor"
+		class="com.mycom.myapp.user.LoginCheckInterceptor">
+	</beans:bean>
+	<interceptors>
+		<interceptor>
+			<mapping path="/**" />
+			<exclude-mapping path="/resources/**" />
+			<exclude-mapping path="/img/**" />
+			<exclude-mapping path="/login/*" />
+			<beans:ref bean="LoginCheckInterceptor" />
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>

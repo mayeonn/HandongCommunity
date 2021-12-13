@@ -31,7 +31,7 @@ public class TodoListController {
 			System.out.println("할일 추가 실패");
 		else
 			System.out.println("할일 추가 성공!!!");
-		return "redirect:todolistlist";
+		return "redirect:list";
 	}
 	
 	@RequestMapping(value = "/todolist/editform/{id}", method = RequestMethod.GET)
@@ -48,7 +48,7 @@ public class TodoListController {
 			System.out.println("할일 수정 실패");
 		else
 			System.out.println("할일 수정 성공!!!");
-		return "redirect:todolistlist";
+		return "redirect:list";
 	}
 	
 	@RequestMapping(value = "/todolist/deleteok/{id}", method = RequestMethod.GET)
@@ -58,7 +58,7 @@ public class TodoListController {
 			System.out.println("할일 삭제 실패");
 		else
 			System.out.println("할일 삭제 성공!!!");
-		return "redirect:../todolistlist";
+		return "redirect:../list";
 	}
 	
 }

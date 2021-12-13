@@ -34,7 +34,7 @@ button {
 
 <h2>할일 추가</h2>
 
-<form action="/comment/addok" method="post">
+<form action="addok" method="post">
 <table>
 <tr><td><input type="text" name="title" placeholder="제목"/></td></tr>
 <tr><td><input type="text" name="content" placeholder="내용"/></td></tr>
@@ -42,7 +42,7 @@ button {
 </table>
 <br>
 <button type="submit">추가하기</button>
-<button type="button" onclick="location.href='/todolist/list'">취소하기</button>
+<button type="button" onclick="location.href='list'">취소하기</button>
 </form>
 
 </body>

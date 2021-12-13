@@ -8,6 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias alias="board" type="com.mycom.myapp.board.BoardVO" />
 		<typeAlias alias="todolist" type="com.mycom.myapp.todolist.TodoListVO" />
 		<typeAlias alias="comment" type="com.mycom.myapp.comment.CommentVO" />
+		<typeAlias alias="user" type="com.mycom.myapp.user.UserVO" />
 	</typeAliases>
 
 </configuration>
