@@ -6,8 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.mycom.myapp.board.BoardVO;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class CommentController {
@@ -22,7 +21,8 @@ public class CommentController {
 	}
 
 	@RequestMapping(value = "/comment/add", method = RequestMethod.GET)
-	public String addComment() {
+	public String addComment(@RequestParam("id") int id, Model model) {
+		model.addAttribute("board_id", id);
 		return "addcommentform";
 	}
 	

@@ -86,8 +86,8 @@ button {
 		<td>${u.likes}</td>
 		<td>${u.numOfComments}</td>
 		<td><a href="../comment/list/${u.seq}">댓글보기</a></td>
-		<td><a href="../comment/add">댓글쓰기</a></td>
-		<td><a href="/board/editform/${u.seq}">글수정</a></td>
+		<td><a href="../comment/add?id=${u.seq}">댓글쓰기</a></td>
+		<td><a href="editform/${u.seq}">글수정</a></td>
 		<td><a href="javascript:delete_ok('${u.seq}')">글삭제</a></td>
 	</tr>
 </c:forEach>

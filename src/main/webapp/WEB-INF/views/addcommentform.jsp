@@ -31,11 +31,12 @@ button {
 
 <body>
 
-<h3>댓글 추가</h3>
+<h3>${board_id} 댓글 추가</h3>
+
 
 <form action="../comment/addok" method="POST">
 <table>
-<tr><td><input type="text" name="board_id" placeholder="seq"/></td></tr>
+<input type="hidden" name="board_id" value= "${board_id}">
 <tr><td><input type="text" name="writer" placeholder="글쓴이"/></td></tr>
 <tr><td><textarea cols="61" rows="10" name="content" placeholder="내용"></textarea></td></tr>
 </table>
