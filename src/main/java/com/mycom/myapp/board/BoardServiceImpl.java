@@ -34,6 +34,10 @@ public class BoardServiceImpl implements BoardService {
 	public List<BoardVO> getBoardList() {
 		return boardDAO.getBoardList();
 	}
-
+	
+	@Override
+	public int addLike(int id) {
+		return boardDAO.addLike(id);
+	}
 	
 }

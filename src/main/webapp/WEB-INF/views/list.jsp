@@ -67,6 +67,7 @@ button {
 	<th>Content</th>
 	<th>Date</th>
 	<th>Likes</th>
+	<th><img src='../img/like.png' height="30"></th>
 	<th>Comments</th>
 	<th>View Comments</th>
 	<th>Add Comment</th>
@@ -84,6 +85,7 @@ button {
 		<td>${u.content}</td>
 		<td>${u.regdate}</td>
 		<td>${u.likes}</td>
+		<td><button type="button" onclick="location.href='addlike/${u.seq}'">like</button></td>
 		<td>${u.numOfComments}</td>
 		<td><a href="../comment/list/${u.seq}">댓글보기</a></td>
 		<td><a href="../comment/add?id=${u.seq}">댓글쓰기</a></td>

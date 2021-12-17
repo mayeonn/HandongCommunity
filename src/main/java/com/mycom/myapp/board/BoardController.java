@@ -61,4 +61,10 @@ public class BoardController {
 		return "redirect:../list";
 	}
 	
+	@RequestMapping(value = "/board/addlike/{id}", method = RequestMethod.GET)
+	public String addLike(@PathVariable("id") int id){
+		int i = boardService.addLike(id);
+		return "redirect:../list";
+	}
+	
 }

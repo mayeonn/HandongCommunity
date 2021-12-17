@@ -19,4 +19,7 @@
 	<update id="countNumOfComments">
 		update BOARD set numOfComments = ( select count(*) FROM COMMENT WHERE board_id = #{seq} ) where seq=#{seq}
 	</update>
+	<update id="addLike">
+		update BOARD set likes = likes + 1 where seq = #{seq}
+	</update>
 </mapper>

@@ -42,4 +42,9 @@ public class BoardDAO {
 		return list;
 	}
 	
+	public int addLike(int id) {
+		int result = sqlSession.insert("Board.addLike", id);
+		return result;
+	}
+	
 }
