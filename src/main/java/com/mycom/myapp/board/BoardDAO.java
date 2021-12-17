@@ -34,6 +34,11 @@ public class BoardDAO {
 	
 	public List<BoardVO> getBoardList(){
 		List<BoardVO> list = sqlSession.selectList("Board.getBoardList");
+		
+		for(BoardVO vo : list) {
+			sqlSession.insert("Board.countNumOfComments", vo);
+		}
+		
 		return list;
 	}
 	
