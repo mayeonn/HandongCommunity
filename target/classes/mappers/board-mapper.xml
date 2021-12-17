@@ -16,4 +16,10 @@
 	<select id="getBoardList" resultType="board">
 		select * from BOARD order by seq desc
 	</select>
+	<update id="countNumOfComments">
+		update BOARD set numOfComments = ( select count(*) FROM COMMENT WHERE board_id = #{seq} ) where seq=#{seq}
+	</update>
+	<update id="addLike">
+		update BOARD set likes = likes + 1 where seq = #{seq}
+	</update>
 </mapper>
