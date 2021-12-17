@@ -38,7 +38,7 @@ button {
 <table>
 <tr><td><input type="text" name="title" placeholder="제목"/></td></tr>
 <tr><td><input type="text" name="content" placeholder="내용"/></td></tr>
-<tr><td><input type="date" id="start" name="due_date" value="2021-12-01" min="2021-01-01" max="2022-12-31"></td></tr>
+<tr><td><input type="date" name="due_date" value="2021-12-01" min="2021-01-01" max="2022-12-31"></td></tr>
 </table>
 <br>
 <button type="submit">추가하기</button>
