@@ -12,25 +12,35 @@
 #cate{
 	width: 100px;
 	height: 30px;
-	background-color: #75bd87;
-	border-radius: 2px;
+	background-color: #7575a3;
+	border-radius: 3px;
 	color: white;
 	text-align: center;
 }
-#cont {
-	width: 400px;
-	background-color: #dcefe5;
-	border-radius: 5px;
-}
+
 #butt {
-	background-color: #418b62;
+	background-color: #5d5dbb;
 	color: white;
 	font-size: 15px;
 	border: 1px;
-	width: 100px;
-	height: 50px;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
 }
-
+textarea{
+background-color: #dbdbf0;
+	padding: 10px;
+	width: 600px;
+	height: 100%;
+	border: none;
+	border-radius: 3px;
+}
+input{
+background-color: #dbdbf0;
+	padding: 10px;
+	width: 600px;
+	border: none;
+}
 </style>
 </head>
 
@@ -54,6 +64,7 @@
 			<td id="cont"><form:input path="due_date" /></td>
 		</tr>
 	</table>
+	<br>
 	<input id="butt" type="submit" value="수정하기" />
 	<input id="butt" type="button" value="취소하기" onclick="history.back()" />
 </form:form>

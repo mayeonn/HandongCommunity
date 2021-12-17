@@ -7,25 +7,29 @@
 <title>AddPost</title>
 <style>
 input{
-	width: 500px;
+	width: 100%;
 	height: 30px;
 	background-color: #dcefe5;
 	border: none;
 	border-radius: 5px;
 }
 textarea{
+	width: 100%;
 	background-color: #dcefe5;
 	border: none;
 	border-radius: 5px;
 }
+
 button {
 	background-color: #418b62;
 	color: white;
 	font-size: 15px;
 	border: 1px;
-	width: 100px;
-	height: 50px;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
 }
+body{margin: 50px;}
 </style>
 </head>
 
@@ -37,7 +41,7 @@ button {
 <table>
 <tr><td><input type="text" name="title" placeholder="제목"/></td></tr>
 <tr><td><input type="text" name="writer" placeholder="글쓴이"/></td></tr>
-<tr><td><textarea cols="61" rows="10" name="content" placeholder="내용"></textarea></td></tr>
+<tr><td><div class="textwrapper"><textarea cols="100"rows="10" name="content" placeholder="내용"></textarea></div></td></tr>
 </table>
 <button type="submit">추가하기</button>
 <button type="button" onclick="location.href='list'">취소하기</button>

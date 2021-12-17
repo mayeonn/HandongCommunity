@@ -7,27 +7,31 @@
 <title>AddTodoList</title>
 <style>
 input{
-	width: 500px;
-	height: 20px;
+	width: 600px;
+	height: 40px;
 	background-color: #dbdbf0;
 	border: none;
 	border-radius: 5px;
-	padding: 10px;
 }
 textarea{
+	width: 100%;
 	background-color: #dbdbf0;
 	border: none;
 	border-radius: 5px;
 }
+
 button {
 	background-color: #5d5dbb;
 	color: white;
 	font-size: 15px;
 	border: 1px;
 	width: 80px;
-	height: 30px;
+	height: 40px;
+	border-radius: 5px;
 }
+body{margin: 50px;}
 </style>
+
 </head>
 
 <body>
