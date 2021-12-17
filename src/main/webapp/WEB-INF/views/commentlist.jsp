@@ -44,7 +44,7 @@
 
 <!-- Button -->
 <button type="button">Likes</button>
-<button type="button" onclick="history.back()">목록</button>
+<button type="button" onclick="location.href='../../board/list'">목록</button>
 <button type="button" onclick="location.href='../add'">댓글 추가</button>
 
 <table id="list" width="90%">
