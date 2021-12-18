@@ -13,11 +13,26 @@ img, label {
 label {
 	width: 130px
 }
-
+textarea{
+	padding: 10px;
+	width: 300px;
+	height: 100%;
+	border: none;
+	border-radius: 3px;
+}
+input{
+	padding: 10px;
+	width: 300px;
+	border: none;
+}
 button {
-	background-color: blue;
+	background-color: #5d5dbb;
 	color: white;
-	font-size: 15px
+	font-size: 15px;
+	border: 1px;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
 }
 </style>
 </head>
@@ -26,11 +41,12 @@ button {
 		<img src='../img/snowman.jpg' height="250">
 		<form method="post" action="loginOk">
 			<div>
-				<label>User ID: </label><input type='text' name='userid' />
-			</div>
+				<label>User ID</label><br><input type='text' name='userid' />
+			</div><br>
 			<div>
-				<label>Password: </label> <input type='password' name='password' />
+				<label>Password</label><br><input type='password' name='password' />
 			</div>
+			<br>
 			<button type='submit'>login</button>
 		</form>
 	</div>
